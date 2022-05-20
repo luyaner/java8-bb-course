@@ -19,7 +19,7 @@ public class FamilyAccountRecorder {
         int accountBalance = 10000;
         String accountDetails = "Item\t\tBalance\t\tAmount\t\tDescription\n";
 
-        label: do {
+        do {
             printMenu();
 
             int selectionNumber = Utility.readSelectionNumber();
@@ -31,7 +31,7 @@ public class FamilyAccountRecorder {
             switch (selectionNumber) {
                 case 1:
                     showAccountDetails(accountDetails);
-                    continue;
+                    break;
                 case 2:
                     System.out.print(INCOME_AMOUNT);
                     incomeAmount = Utility.readNumber();
@@ -39,7 +39,7 @@ public class FamilyAccountRecorder {
                     incomeDescription = Utility.readString();
                     accountBalance += incomeAmount;
                     accountDetails += "Income\t\t"+accountBalance+"\t\t"+incomeAmount+"\t\t\t"+incomeDescription+"\n";
-                    continue;
+                    break;
                 case 3:
                     System.out.print(SPENDING_AMOUNT);
                     spendingAmount = Utility.readNumber();
@@ -47,14 +47,15 @@ public class FamilyAccountRecorder {
                     spendingDescription = Utility.readString();
                     accountBalance = accountBalance - spendingAmount;
                     accountDetails += "Spending\t"+accountBalance+"\t\t"+spendingAmount+"\t\t\t"+spendingDescription+"\n";
-                    continue;
+                    break;
                 case 4:
                     char response = getConfirmationResponse();
                     if (response == Y) {
-                        break label;
+                        loopFlag = false;
                     } else if (response == N) {
                         continue;
                     } else System.out.println(INVALID_INPUT);
+                    break;
             }
 
         } while (loopFlag);
