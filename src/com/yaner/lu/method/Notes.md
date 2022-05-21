@@ -7,6 +7,8 @@
     - 栈：存局部变量和对象的引用
     - 堆：存new出来的对象
     - see MethodPractice.java - practice 2 ![img.png](img.png)
+- **！！引用数据类型作为参数传递**将定义的对象作为参数传入调用的方法中后，对象的属性值在方法调用结束后**也改变了**
+  - 内存空间情况如下：![img_3.png](img_3.png)
 
 - 方法的重载 Overload (参数列表不同的同名方法)
   - 方法名和参数列表相同，但返回类型不同时，无法构成方法重载，因为jvm无法通过参数列表判断调用的是哪个方法
@@ -14,3 +16,4 @@
 ###练习
 - practice 1: ![img_1.png](img_1.png)
 - practice 2: ![img_2.png](img_2.png)
+- practice 3: ![img_4.png](img_4.png)
