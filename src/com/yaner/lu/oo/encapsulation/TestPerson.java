@@ -1,4 +1,4 @@
-package com.yaner.lu.encapsulation;
+package com.yaner.lu.oo.encapsulation;
 
 public class TestPerson {
     public static void main(String[] args) {
