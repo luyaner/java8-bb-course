@@ -75,6 +75,40 @@
   
 ### 循环遍历二维数组
 - see ArrayPractice4.java
+
+## 可变参数 
+- 可变参数当底层其实也是一个array
+- 当被调用的方法里的参数列表是一个可变参数时， 可以传0个或多个实参，这就体现了可变参数的灵活性
+```
+public class ArrayTest {
+    public static void main(String[] args) {
+        int sum = sumUpElements(1,2,3,4,5,6);// It is not longer needed to new an array before you calling the sumUpElements()
+        System.out.println(sum);
+    }
+}
+
+public static int sumUpElements(int...args) {
+        int sum = 0;
+        for (int i = 0; i < args.length; i++) {
+            sum += args[i];
+        }
+        return sum;
+    }
+
+```
+- 可变参数方法和数组参数方法之间不能构成重载
+- 写可变参数方法，可变参数列表必须写在参数列表的末尾，也就是说参数列表里只能有一个可变参数
+```
+public static void testMethod(int a, String...args) {
+    // This will work.
+}
+public static void testMethod(int...a, String...args) {
+    // This will NOT work.
+}
+public static void testMethod(String...args, int a) {
+    // This will NOT work.
+}
+```
 ## 练习
 - practice 1: ![img.png](img.png)
 - practice 2: ![img_2.png](img_2.png)
