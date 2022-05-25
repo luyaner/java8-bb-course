@@ -21,8 +21,31 @@
           names[4] = "Ran";
       - ```
 
-- 注意⚠️
+### 数组的反转
+```
+        for (int i = 0; i < array1.length; i++) {
+            int temp = array1[i];
+            array1[i] = array1[array1.length - 1 - i];
+            array1[array1.length - 1 - i] = temp;
+        }
+```
+
+### 数组的排序
+- 冒泡排序 see BubbleOrderedTest.java
+  利用两层循环去排序，外层循环控制比较多少轮，内层循环控制每轮比较多少次
+- 简单选择排序
+  see SelectionOrderedTest.java
+- 使用java提供的工具类 `java.util.Arrays`排序
+
+### 注意⚠️
   - 初始化的两种写法：`int[] names;` or `int names[]`
+  - 数组长度一旦确定，无法再增加长度或者减少长度，扩容只能new一个新的数组，重新设定长度，并将旧数组的元素赋值到新数组上
+  - 将数组元素的值赋给另一个数组的元素时，不可以直接用`array1[] = array2[];`而要用
+  ```
+  for (int i = 0; i < array1.length; i++) {
+    array2[i] = array1[i];
+    }
+  ```
 
 ## 二维数组
 - 数组里的元素的类型还是数组 eg. int[][]
@@ -57,3 +80,7 @@
 - practice 2: ![img_2.png](img_2.png)
 - practice 3: ![img_3.png](img_3.png)
 - practice 5: ![img_4.png](img_4.png)
+- practice 6: ![img_5.png](img_5.png)
+  `int[] x,y[] -> int[] x; int[] y[]`
+  a) ❌ b) ✅ c) ❌ d) ❌ e) ✅ f) ❌
+- practice 7: see TestArray.java ![img_6.png](img_6.png)
