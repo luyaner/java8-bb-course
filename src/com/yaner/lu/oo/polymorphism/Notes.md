@@ -58,3 +58,13 @@ class Son extends Father {
     father[0] = new Father();
    father[1] = new Son();   
    ```
+2. 多态参数
+    ```
+   // 假设Man, Woman, Student都是Person的子类, 都有各自的walk()和eat()方法
+   // 现在在main方法中，声明一个方法，参数列别为父类Person
+   public static void show(Person person) {
+        person.walk();
+        person.eat();
+   } 
+   // 根据调用show方法的对象的不同，不同子类的walk()和eat()方法会被调用
+   ```
