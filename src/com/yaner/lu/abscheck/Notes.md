@@ -21,5 +21,10 @@
 - `abstract`和`static`不能同时使用，因为`static`方法随着类的加载而被加载，也就意味着没有方法体的`abstract class`可以通过`类名.方法名()`去调用，which doesn't make any sense
 - `abstract`和`private`不能同时使用，因为子类无法使用`private class`，无法对其进行重写
 
+## 模版方法设计模式
+- 当类中一部分功能是确定的，一部分功能是**不确定的**时，将不确定的部分暴露，让子类去实现
+- see `TemplateDesign.java`
+
 ## 练习
 - see /practices ![img.png](img.png)
+- final practice ![img_1.png](img_1.png)![img_2.png](img_2.png)

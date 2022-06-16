@@ -11,8 +11,14 @@
 ## this 关键字
 - 使用在本类中，代表当前对象，可用于调用当前对象的属性，方法，构造器
 - 在方法中区分成员变量和局部变量，`this.age = age;`
+- this调用本类的构造器`this(参数列表) :`  (see ThisConstructor.java)
+    - 注意⚠️
+  1. this 调用构造器时，调用构造器的语句必须写在构造器中的可执行代码的首行
+  2. this调用构造器时，不可以互相调用，避免递归构造器调用
 ## 练习
 - practice 1: see Main.java
 - practice 2
 - practice 3: ![img.png](img.png)
 - practice 4: see MarryTest.java ![img_1.png](img_1.png)
+- practice 5: see ThisConstructorPractice.java ![img_2.png](img_2.png)
+- final practice: ![img_3.png](img_3.png) ![img_4.png](img_4.png) ![img_5.png](img_5.png)
